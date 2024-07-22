@@ -22,10 +22,10 @@ Selenium é uma ferramenta poderosa para automação de navegadores web. Com Sel
 
 Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-    Python (versão 3.6 ou superior)
-    pip
-    Google Chrome (ou outro navegador de sua escolha)
-    ChromeDriver (compatível com a versão do seu Chrome)
+Python (versão 3.6 ou superior)
+pip
+Google Chrome (ou outro navegador de sua escolha)
+ChromeDriver (compatível com a versão do seu Chrome)
 
 🚀 Instalação
 
@@ -87,19 +87,25 @@ def preenche_formulario():
 
     #clica no botão para enviar o formulário
     driver.find_element(By.XPATH, '/html/body/div[3]/form/button').click()
-    time.sleep(5)```
+    time.sleep(5)
+```
 
 ▶️ Como Executar
-  ```#Chamamos a função para executar o teste
-  preenche_formulario()```
+  #Chamamos a função para executar o teste
+  ```preenche_formulario()```
 
-    O navegador abrirá, preencherá o formulário e você verá o resultado.
+O navegador abrirá, preencherá o formulário e você verá o resultado.
 
 📚 Recursos Adicionais
 
-    Documentação do Selenium
-    Tutoriais de Selenium com Python
+Documentação do Selenium
+Tutoriais de Selenium com Python
 
+Divirta-se automatizando seus testes e explorando o poder do Selenium! 🚀
+
+Se tiver dúvidas ou sugestões, fique à vontade para abrir uma issue ou um pull request.
+
+Happy Coding! 💻✨
 
 
 
