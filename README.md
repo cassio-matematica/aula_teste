@@ -104,7 +104,7 @@ def preenche_formulario():
 ```
 
 ▶️ Como Executar
-  #Chamamos a função para executar o teste
+  #Execute o Script Python:
   ```python aula_teste.py```
 
 O navegador abrirá, preencherá o formulário e você verá o resultado.
