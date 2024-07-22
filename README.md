@@ -4,7 +4,7 @@ Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 Este reposit
 📋 Índice
 
 Introdução
-    *Pré-requisitos
+    -Pré-requisitos
     *Instalação
     *Código do Formulário
     *Script de Teste
