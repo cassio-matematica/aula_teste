@@ -1,5 +1,6 @@
 🌟 Aula de Teste com Selenium 🌟
-Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 Este repositório contém um exemplo simples de como usar Selenium para interagir com um formulário HTML.
+Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 Este repositório contém um 
+exemplo simples de como usar Selenium para interagir com um formulário HTML.
 
 📋 Índice
 
