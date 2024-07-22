@@ -4,29 +4,29 @@ Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 Este reposit
 📋 Índice
 
 Introdução
-    -Pré-requisitos
-    *Instalação
-    *Código do Formulário
-    *Script de Teste
-    *Como Executar
-    *Recursos Adicionais
+Pré-requisitos
+Instalação
+Código do Formulário
+Script de Teste
+Como Executar
+Recursos Adicionais
     
 🎓 Introdução
 
 Selenium é uma ferramenta poderosa para automação de navegadores web. Com Selenium, você pode realizar tarefas como:
 
-*Automação de testes para aplicações web.
-*Web scraping (extração de dados).
-*Automação de tarefas repetitivas no navegador.
+Automação de testes para aplicações web.
+Web scraping (extração de dados).
+Automação de tarefas repetitivas no navegador.
 
 🛠 Pré-requisitos
 
 Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-*Python (versão 3.6 ou superior)
-*pip
-*Google Chrome (ou outro navegador de sua escolha)
-*ChromeDriver (compatível com a versão do seu Chrome)
+Python (versão 3.6 ou superior)
+pip
+Google Chrome (ou outro navegador de sua escolha)
+ChromeDriver (compatível com a versão do seu Chrome)
 
 🚀 Instalação
 
