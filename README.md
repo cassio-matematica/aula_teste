@@ -1,45 +1,56 @@
-🌟 Aula de Teste com Selenium 🌟
-Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 Este repositório contém um 
-exemplo simples de como usar Selenium para interagir com um formulário HTML.
 
-📋 Índice
+# 🌟 Aula de Teste com Selenium 🌟
 
-    Introdução
-    Pré-requisitos
-    Instalação
-    Código do Formulário
-    Script de Teste
-    Como Executar
-    Recursos Adicionais
-    
-🎓 Introdução
+Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 
+Este repositório contém um exemplo simples de como usar Selenium para interagir com um formulário HTML.
+
+## 📋 Índice
+
+- [Introdução](#🎓-introdução)
+- [Pré-requisitos](#🛠-pré-requisitos)
+- [Instalação](#🚀-instalação)
+- [Código do Formulário](#📝-código-do-formulário)
+- [Script de Teste](#🧪-script-de-teste)
+- [Como Executar](#▶️-como-executar)
+- [Recursos Adicionais](#📚-recursos-adicionais)
+
+
+## 🎓 Introdução
 
 Selenium é uma ferramenta poderosa para automação de navegadores web. Com Selenium, você pode realizar tarefas como:
 
-Automação de testes para aplicações web.
-Web scraping (extração de dados).
-Automação de tarefas repetitivas no navegador.
+- Automação de testes para aplicações web.
+- Web scraping (extração de dados).
+- Automação de tarefas repetitivas no navegador.
 
-🛠 Pré-requisitos
+
+## 🛠 Pré-requisitos
 
 Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
-Python (versão 3.6 ou superior)
-pip
-Google Chrome (ou outro navegador de sua escolha)
-ChromeDriver (compatível com a versão do seu Chrome)
+- [Python](https://www.python.org/) (versão 3.6 ou superior)
+- [pip](https://pip.pypa.io/en/stable/installation/)
+- [Google Chrome](https://www.google.com/chrome/) (ou outro navegador de sua escolha)
+- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) (compatível com a versão do seu Chrome)
 
-🚀 Instalação
+
+## 🚀 Instalação
 
 1. Clone este repositório:
-    ``git clone https://github.com/seu-usuario/aula-teste-selenium.git
-    cd aula-teste-selenium``
 
-2. Instale as dependências do Selenium:`
-    ``pip install selenium``
+    ```bash
+    git clone https://github.com/seu-usuario/aula-teste-selenium.git
+    cd aula-teste-selenium
+    ```
 
-3. Coloque o ChromeDriver no seu PATH ou na mesma pasta do script Python.
+2. Instale as dependências do Selenium:
 
+    ```bash
+    pip install selenium
+    ```
+
+3. Coloque o `ChromeDriver` no seu PATH ou na mesma pasta do script Python.
+  
 🧪 Script de Teste
 
 Crie um arquivo Python chamado aulateste.py com o seguinte conteúdo:
@@ -94,7 +105,7 @@ def preenche_formulario():
 
 ▶️ Como Executar
   #Chamamos a função para executar o teste
-  ```preenche_formulario()```
+  ```python aula_teste.py```
 
 O navegador abrirá, preencherá o formulário e você verá o resultado.
 
