@@ -4,13 +4,13 @@ exemplo simples de como usar Selenium para interagir com um formulário HTML.
 
 📋 Índice
 
-Introdução
-Pré-requisitos
-Instalação
-Código do Formulário
-Script de Teste
-Como Executar
-Recursos Adicionais
+    Introdução
+    Pré-requisitos
+    Instalação
+    Código do Formulário
+    Script de Teste
+    Como Executar
+    Recursos Adicionais
     
 🎓 Introdução
 
