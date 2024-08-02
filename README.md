@@ -112,3 +112,29 @@ visualizations_text = plt.figtext(0.5, 0.02, 'Número de visualizações: 0.00 c
 
 # Mostrar o gráfico
 plt.show()
+```
+
+## ▶️ Como Executar
+
+1. Execute o Script Python:
+
+    ```bash
+    python aula_quadratica.py
+    ```
+
+2. Interaja com o gráfico inserindo valores gastos e veja como o número de visualizações muda. O gráfico mostrará a função quadrática e o ponto máximo.
+
+## 📚 Recursos Adicionais
+
+- [Documentação do Matplotlib](https://matplotlib.org/stable/contents.html)
+- [Tutoriais sobre Funções Quadráticas](https://www.khanacademy.org/math/algebra/x2f8bb115bf00530d:quadratics)
+
+  
+
+Divirta-se explorando funções quadráticas e visualizando suas aplicações práticas! 🚀
+
+Se tiver dúvidas ou sugestões, fique à vontade para abrir uma issue ou um pull request.
+
+Happy Coding! 💻✨
+
+
