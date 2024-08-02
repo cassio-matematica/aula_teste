@@ -1,28 +1,26 @@
+# 🌟 Aula de Função Quadrática 🌟
 
-# 🌟 Aula de Teste com Selenium 🌟
-
-Bem-vindo à nossa aula de teste automatizado usando Selenium! 🚀 
-Este repositório contém um exemplo simples de como usar Selenium para interagir com um formulário HTML.
+Bem-vindo à nossa aula sobre funções quadráticas e suas aplicações! 🚀
+Neste repositório, você encontrará um exemplo de como visualizar e interagir com funções quadráticas usando Python e Matplotlib.
 
 ## 📋 Índice
 
 - [Introdução](#🎓-introdução)
 - [Pré-requisitos](#🛠-pré-requisitos)
 - [Instalação](#🚀-instalação)
-- [Código do Formulário](#📝-código-do-formulário)
-- [Script de Teste](#🧪-script-de-teste)
+- [Código da Função Quadrática](#📝-código-da-função-quadrática)
 - [Como Executar](#▶️-como-executar)
 - [Recursos Adicionais](#📚-recursos-adicionais)
 
-
 ## 🎓 Introdução
 
-Selenium é uma ferramenta poderosa para automação de navegadores web. Com Selenium, você pode realizar tarefas como:
+As funções quadráticas são equações polinomiais de segundo grau da forma \( f(x) = ax^2 + bx + c \). Elas descrevem uma parábola no plano cartesiano, que pode abrir para cima ou para baixo, dependendo do coeficiente \( a \). 
 
-- Automação de testes para aplicações web.
-- Web scraping (extração de dados).
-- Automação de tarefas repetitivas no navegador.
+Nesta aula, exploraremos como:
 
+- Compreender os coeficientes da função quadrática.
+- Encontrar as raízes e o vértice da parábola.
+- Aplicar essas funções a problemas reais, como maximização de visualizações em campanhas de mídia.
 
 ## 🛠 Pré-requisitos
 
@@ -30,98 +28,87 @@ Antes de começar, certifique-se de ter o seguinte instalado em sua máquina:
 
 - [Python](https://www.python.org/) (versão 3.6 ou superior)
 - [pip](https://pip.pypa.io/en/stable/installation/)
-- [Google Chrome](https://www.google.com/chrome/) (ou outro navegador de sua escolha)
-- [ChromeDriver](https://sites.google.com/a/chromium.org/chromedriver/downloads) (compatível com a versão do seu Chrome)
-
+- [Matplotlib](https://matplotlib.org/) para visualização gráfica
 
 ## 🚀 Instalação
 
 1. Clone este repositório:
 
     ```bash
-    git clone https://github.com/seu-usuario/aula-teste-selenium.git
-    cd aula-teste-selenium
+    git clone https://github.com/seu-usuario/aula-funcao-quadratica.git
+    cd aula-funcao-quadratica
     ```
 
-2. Instale as dependências do Selenium:
+2. Instale as dependências do Matplotlib:
 
     ```bash
-    pip install selenium
+    pip install matplotlib
     ```
 
-3. Coloque o `ChromeDriver` no seu PATH ou na mesma pasta do script Python.
-  
-🧪 Script de Teste
+## 📝 Código da Função Quadrática
 
-Crie um arquivo Python chamado aulateste.py com o seguinte conteúdo:
+Crie um arquivo Python chamado `aula_quadratica.py` com o seguinte conteúdo:
 
-```
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-import time
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.widgets import TextBox
 
-# Criar um webdriver para Chrome
-driver = webdriver.Chrome()
+# Definir a função quadrática
+def func(x):
+    return -2*x**2 + 80*x
 
-# Acessar a página da Bipo
+# Criar dados
+x = np.linspace(0, 50, 400)  # Ajustar intervalo x para 0 a 50
+y = func(x)
 
-driver.get("http://bipoconcursos.com.br")
-time.sleep(5)
+# Encontrar o ponto máximo da função
+x_max = 80 / 4  # O ponto máximo para a função dada é x = -b/(2a)
+y_max = func(x_max)
 
-#Clicar em fazer inscrição
+# Configurar o gráfico
+fig, ax = plt.subplots(figsize=(12, 8))
+ax.plot(x, y, color='blue', label='V(x) = -2x^2 + 80x')
+ax.plot(x_max, y_max, 'ro', markersize=8, label='Máximo')  # Ponto máximo
+ax.set_xlim(0, 50)
+ax.set_ylim(0, y_max + 10)  # Ajustar intervalo y para uma visualização melhor
+ax.set_xlabel('Valor gasto (em reais)')
+ax.set_ylabel('Número de visualizações (em centenas)')
+ax.set_title('Função Quadrática para Maximização de Views')
+ax.legend()
+ax.grid(True)
 
-driver.find_element(By.XPATH, "/html/body/div[1]/div/a[1]")
-time.sleep(5)
+# Adicionar um campo de entrada
+def submit(text):
+    try:
+        x_input = float(text)
+        if 0 <= x_input <= 50:
+            y_input = func(x_input)
+            if y_input < 0:
+                y_input = 0  # Garantir que o valor de visualização não seja negativo
+            # Atualiza o ponto com base na entrada do usuário
+            cursor.set_data([x_input], [y_input])
+            # Atualiza o texto de visualizações
+            visualizations_text.set_text(f'Número de visualizações: {y_input:.2f} centenas')
+            ax.figure.canvas.draw()
+        else:
+            visualizations_text.set_text('Valor fora do intervalo. Insira um valor entre 0 e 50.')
+    except ValueError:
+        visualizations_text.set_text('Insira um valor numérico válido.')
 
+# Criar uma caixa de texto para entrada do usuário
+axbox = plt.axes([0.15, 0.1, 0.7, 0.05])  # Ajuste da posição da caixa de texto
+text_box = TextBox(axbox, 'Valor gasto:', initial='0')
+text_box.on_submit(submit)
 
-#Clicar no campo nome e preencher o nome
+# Adicionar um cursor ao gráfico
+cursor, = ax.plot([], [], 'ro', markersize=8, label='Ponto selecionado')
 
-def preenche_formulario():
-    #preenche o nome
-    driver.find_element(By.XPATH, '//*[@id="nome"]').send_keys("Cássio de Albuquerque")
-    time.sleep(2)
+# Adicionar um texto para mostrar o número de visualizações
+visualizations_text = plt.figtext(0.5, 0.02, 'Número de visualizações: 0.00 centenas', 
+                                  ha='center', va='center', fontsize=12, 
+                                  bbox=dict(facecolor='lightyellow', edgecolor='black', boxstyle='round,pad=0.5'),
+                                  style='italic', color='black')
 
-    #preehche o campo cpf
-    driver.find_element(By.XPATH, '//*[@id="cpf"]').send_keys('31205370803')
-    time.sleep(2)
-
-    #preenche o campo e-mail
-    driver.find_element( By.XPATH, '//*[@id="email"]').send_keys("cassio.matematematica@gmail.com")
-    time.sleep(2)
-    
-    #preenche o campo cep
-    driver.find_element(By.XPATH,'//*[@id="cep"]').send_keys('03180060')
-    time.sleep(2)
-
-    #preenche o campo número do endereço
-    driver.find_element(By.XPATH, '//*[@id="numero"]').send_keys('6')
-    time.sleep(2)
-
-    #clica no botão para enviar o formulário
-    driver.find_element(By.XPATH, '/html/body/div[3]/form/button').click()
-    time.sleep(5)
-```
-
-▶️ Como Executar
-  #Execute o Script Python:
-  ```
-  python aula_teste.py
-```
-
-O navegador abrirá, preencherá o formulário e você verá o resultado.
-
-📚 Recursos Adicionais
-
-Documentação do Selenium
-Tutoriais de Selenium com Python
-
-Divirta-se automatizando seus testes e explorando o poder do Selenium! 🚀
-
-Se tiver dúvidas ou sugestões, fique à vontade para abrir uma issue ou um pull request.
-
-Happy Coding! 💻✨
-
-
-
-
+# Mostrar o gráfico
+plt.show()
